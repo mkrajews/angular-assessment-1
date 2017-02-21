@@ -11,7 +11,10 @@
         <!--Here is your header with the navigation nested inside -->
         <header class="site-header" role="banner">
             <div class="container">
+
               <!--Insert Logo directive here -->
+              <logo-directive></logo-directive>
+
                 <nav class="site-nav">
                     <ul class="primary-nav">
                         <li>
@@ -26,6 +29,7 @@
                         <li>
                             <a ui-sref="about">About</a>
                         </li>
+
                     </ul>
                 </nav>
                 <button class="hamburger toggle-nav js-toggle-nav" ng-click="showNav">
@@ -47,6 +51,13 @@
 <!--ADD ALL YOUR SCRIPTS HERE -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+<script src='./js/app.js'></script>
+<script src='./js/shopCtrl.js'></script>
+<script src='./js/shopService.js'></script>
+<script src='./js/logoDirective.js'></script>
+
+</script>
 
 </body>
 </html>
