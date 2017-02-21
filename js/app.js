@@ -22,6 +22,22 @@ angular.module('assessment', ['ui.router'])
             url: '/shop',
             templateUrl: './views/shop.html',
             controller: 'shopCtrl'
+        })
+        .state('details', {
+            url: '/details/:id',
+            templateUrl: './views/product-details.html',
+            controller: function($stateParams,$scope,$http) {
+              var id = $stateParams.id;
+              $scope.getProduct = function() {
+                $http({
+                  method: 'GET',
+                  url: 'http://practiceapi.devmounta.in/products/' + id
+                }).then(function(response) {
+                  console.log(response.data);
+                    $scope.product = response.data;
+                });
+              };
+              $scope.getProduct();
+            }
         });
-
-})
+});
